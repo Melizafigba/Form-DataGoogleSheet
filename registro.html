@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicadores de Banco Central - Registro</title>
+  <!--CSS & JQuery-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="icon" href="img/Santanber.png" type="image/png" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--CSS para estilos de sitio-->
+  <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+  <link rel="stylesheet" media="all" href="css/bg.css" />
+
+
+</head>
+
+<body>
+  <!--Background-->
+  <div class='ripple-background'>
+    <div class='circle xxlarge shade1'></div>
+    <div class='circle xlarge shade2'></div>
+    <div class='circle large shade3'></div>
+    <div class='circle mediun shade4'></div>
+    <div class='circle small shade5'></div>
+  </div>
+
+  <!--Navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 100;">
+      <a class="navbar-brand" href="#">Indicadores Banco Central</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Nuestros Productos
+            </a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ">
+          <a class="btn btn-three  btn-gris fuenteblanca" href="Indicadores.html">Indicadores</a>
+          <button class="btn btn-verde btn-three fuenteblanca btn-lg" type="submit">Validador Rutificador</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!--Fin navbar-->
+  <!--titulo sitio-->
+  <div>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Validación de Rut </h1>
+        <p class="lead">Registra tus Datos </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- Contenido-->
+
+  <!--Toast-->
+  <div class="centrado">
+    <div class="toast">
+      <div class="toast-header fixed-top" data-dimiss="toast">
+        <div class="rounded mr-2" style="height: 35px;width: 40px;"></div>
+        <strong class="mr-auto fuenteblanca "> <img src="iconos/icons8_ok_50px_1.png">Registro Correcto!</strong>
+        <small>Hace 2 segundos</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+
+
+    <!--fin toast-->
+
+
+    <form style="margin-left: 25%; width: 50%;">
+      <div class="form-group ">
+        <label class="fuenteblanca">RUT</label>
+        <input type="text" class="form-control" id="txt_rut" placeholder="11.111.111-1">
+
+      </div>
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" id="txt_nombre">
+      </div>
+      <div class="form-group">
+        <label>Apellido Paterno</label>
+        <input type="text" class="form-control" id="txt_appaterno">
+      </div>
+      <div class="form-group">
+        <label>Apellido Materno</label>
+        <input type="text" class="form-control" id="txt_apmaterno">
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" class="form-control" id="txt_correo" placeholder="hola@mail.com">
+        </div>
+
+        <div class="form-group">
+          <label>Tipo de cuenta</label>
+          <select class="form-control" id="txt_cuenta">
+            <option>Vista</option>
+            <option>Corriente</option>
+            <option>Ahorro</option>
+          </select>
+        </div>
+
+        <strong>
+          <ul id="errores" style="color: red;">
+
+          </ul>
+        </strong>
+        <button type="button" class="btn btn-three btn-lg fuenteblanca derecha" style="margin:20px"
+          id="btn_limpiar">Limpiar</button>
+          
+        <button type="button" class="btn btn-three btn-lg btn-verde fuenteblanca derecha" onclick=setTimeout(mensaje,2000) style="margin:20px;" id="btn_registro">Registrarme</button>
+
+    </form>
+
+    <footer>
+      <div class="bg-footer">
+        <br>
+        <br>
+      </div>
+    </footer>
+    <!-- Fin contenido-->
+</body>
+
+<script src="js/funciones.js"></script>
+
+</html>
